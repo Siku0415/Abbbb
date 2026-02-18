@@ -1,194 +1,249 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AB Publication | Handwriting Projects</title>
+
+<title>AB Publication | Write Books & Earn Money</title>
+<meta name="description" content="Join AB Publication. Write books from home and earn up to ₹40,000. Instant payouts and work from home writing projects.">
+<meta name="keywords" content="work from home writing job, book writing project, earn money online India, AB Publication">
+<meta name="author" content="AB Publication">
+
+<link rel="icon" type="image/png" href="logo.png">
+
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',sans-serif;}
-
+html { scroll-behavior: smooth; }
 body{
-background:linear-gradient(135deg,#0f172a,#1e3a8a,#0f172a);
-background-size:400% 400%;
-animation:gradientMove 12s ease infinite;
-color:white;
+  margin:0;
+  font-family:'Inter',sans-serif;
+  background:linear-gradient(180deg,#0f172a,#0b1220);
+  color:#fff;
 }
 
-@keyframes gradientMove{
-0%{background-position:0% 50%;}
-50%{background-position:100% 50%;}
-100%{background-position:0% 50%;}
+/* Sticky Glass Header */
+header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  backdrop-filter:blur(12px);
+  background:rgba(15,23,42,0.7);
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 25px;
+  border-bottom:1px solid rgba(255,255,255,0.08);
 }
+.logo{display:flex;align-items:center;gap:10px;}
+.logo img{height:45px;}
+.logo span{font-family:'Space Grotesk';font-weight:700;font-size:18px;}
 
-header{text-align:center;padding:40px 20px;}
-header img{width:90px;margin-bottom:15px;}
-header h1{font-size:34px;}
-header p{opacity:0.85;}
-
-.notice{
-margin:20px auto;
-width:90%;
-max-width:1000px;
-background:rgba(220,38,38,0.9);
-padding:14px;
-border-radius:10px;
-text-align:center;
-font-weight:bold;
+.btn{
+  padding:10px 20px;
+  border-radius:50px;
+  background:#00b4ff;
+  color:#000;
+  text-decoration:none;
+  font-weight:600;
+  display:inline-block;
+  margin:10px;
+  transition:.3s;
 }
+.btn:hover{transform:translateY(-3px);}
+.btn-green{background:#22c55e;}
 
-.glass-box{
-background:rgba(255,255,255,0.1);
-backdrop-filter:blur(15px);
-border:1px solid rgba(255,255,255,0.2);
-padding:25px;
-border-radius:20px;
-box-shadow:0 15px 30px rgba(0,0,0,0.4);
-margin:25px auto;
-max-width:1000px;
-}
-
-.container{
-max-width:1100px;
-margin:auto;
-padding:20px;
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:30px;
-}
+.section{padding:80px 20px;text-align:center;}
+.container{max-width:1100px;margin:auto;}
 
 .card{
-background:rgba(255,255,255,0.1);
-backdrop-filter:blur(15px);
-border:1px solid rgba(255,255,255,0.2);
-padding:30px;
-border-radius:20px;
-box-shadow:0 15px 30px rgba(0,0,0,0.4);
-transition:0.4s;
+  background:rgba(255,255,255,0.05);
+  backdrop-filter:blur(15px);
+  border:1px solid rgba(255,255,255,0.08);
+  border-radius:20px;
+  padding:25px;
+  margin-bottom:20px;
+  transition:.3s;
+}
+.card:hover{transform:translateY(-5px);}
+
+.grid{display:grid;gap:20px;}
+.grid-2{grid-template-columns:repeat(auto-fit,minmax(280px,1fr));}
+
+video,img{width:100%;border-radius:15px;}
+
+/* Scroll Reveal */
+.reveal{
+  opacity:0;
+  transform:translateY(40px);
+  transition:1s ease;
+}
+.reveal.active{
+  opacity:1;
+  transform:translateY(0);
 }
 
-.card:hover{transform:translateY(-10px);}
+/* Slider */
+.slider{position:relative;overflow:hidden;}
+.slides{display:flex;transition:0.6s ease;}
+.slide{min-width:100%;}
 
-.card h3{color:#38bdf8;margin-bottom:15px;}
-.card p{margin:6px 0;}
+small{color:#94a3b8;}
 
-ul{margin-top:10px;padding-left:20px;}
-button{
-margin-top:20px;
-width:100%;
-padding:12px;
-border:none;
-border-radius:10px;
-background:#25D366;
-color:white;
-font-weight:bold;
-cursor:pointer;
+footer{
+  text-align:center;
+  padding:30px;
+  border-top:1px solid rgba(255,255,255,0.1);
+  color:#94a3b8;
 }
-button:hover{background:#1da851;}
-
-footer{text-align:center;padding:20px;margin-top:40px;opacity:0.7;}
 </style>
 </head>
 
 <body>
 
 <header>
-<img src="logo.png" alt="AB Publication Logo">
-<h1>AB Publication</h1>
-<p>Premium Work From Home Handwriting Projects</p>
+  <div class="logo">
+    <img src="logo.png" alt="AB Publication Logo">
+    <span>AB Publication</span>
+  </div>
+  <a href="https://t.me/+9FiHC-ETIR80ZjM1" class="btn" target="_blank">Join Telegram</a>
 </header>
 
-<div class="notice">
-registration fee is required
-</div>
+<!-- HERO -->
+<section class="section reveal">
+  <h1 style="font-family:'Space Grotesk';font-size:42px;">
+    Write Books, <span style="color:#00b4ff;">Earn Money</span>
+  </h1>
+  <p style="color:#cbd5e1;">Simple projects • Quick payouts • Everything on Telegram</p>
+  <a href="https://t.me/+9FiHC-ETIR80ZjM1" class="btn" target="_blank">Start Now</a>
+</section>
 
-<!-- SLOT COUNTER -->
-<div class="glass-box" style="text-align:center;">
-<h2 style="color:#facc15;">⚡ Limited Project Slots Available</h2>
-<p style="font-size:18px;margin-top:10px;">
-Remaining Slots: <span id="slots" style="font-weight:bold;color:#22c55e;">12</span>
-</p>
-<p style="opacity:0.8;">Slots are filled on first-come, first-serve basis.</p>
-</div>
+<!-- WORK PLANS -->
+<section class="section reveal">
+  <div class="container">
+    <h2>📚 Work Plans</h2>
 
-<!-- PROJECT DETAILS -->
-<div class="glass-box">
-<h2 style="color:#38bdf8;">📌 Project Work Details</h2>
-<ul>
-<li>All writing material will be provided by AB Publication via courier.</li>
-<li>Candidate must complete the project within the given time duration.</li>
-<li>Completed handwritten book must be sent back via courier.</li>
-<li>Work must follow provided format instructions.</li>
-<li>No overwriting or cutting allowed.</li>
-<li>After receiving project, quality verification will be done.</li>
-<li>Salary will be transferred to bank account within 24–48 hours after approval.</li>
-<li>Project assigned after eligibility verification.</li>
-</ul>
-</div>
+    <div class="card">
+      <h3>7 Days Project</h3>
+      <p>49 Pages (7/Day) • Registration ₹499</p>
+      <p><b>₹25,000 Salary</b></p>
+      <a href="https://wa.me/919929131389" class="btn btn-green">Apply</a>
+    </div>
 
-<!-- PROJECT CARDS -->
-<div class="container">
+    <div class="card">
+      <h3>10 Days Project</h3>
+      <p>100 Pages (10/Day) • Registration ₹799</p>
+      <p><b>₹30,000 Salary</b></p>
+      <a href="https://wa.me/919929131389" class="btn btn-green">Apply</a>
+    </div>
 
-<div class="card">
-<h3>Project 1</h3>
-<p>50 Pages (Front & Back 100)</p>
-<p>Duration: 7 Days</p>
-<p>Payment: ₹25000</p>
-<button onclick="applyProject('Project 1 - 50 Pages - ₹25000')">Apply Now</button>
-</div>
+    <div class="card">
+      <h3>15 Days Project</h3>
+      <p>150 Pages (10/Day) • Registration ₹999</p>
+      <p><b>₹35,000 Salary</b></p>
+      <a href="https://wa.me/919929131389" class="btn btn-green">Apply</a>
+    </div>
 
-<div class="card">
-<h3>Project 2</h3>
-<p>90 Pages (Front & Back 180)</p>
-<p>Duration: 10 Days</p>
-<p>Payment: ₹30000</p>
-<button onclick="applyProject('Project 2 - 90 Pages - ₹30000')">Apply Now</button>
-</div>
+    <div class="card">
+      <h3>30 Days Project</h3>
+      <p>300 Pages (10/Day)</p>
+      <p><b>₹40,000 Salary</b></p>
+      <a href="https://wa.me/919929131389" class="btn btn-green">Apply</a>
+    </div>
 
-<div class="card">
-<h3>Project 3</h3>
-<p>120 Pages (Front & Back 240)</p>
-<p>Duration: 15 Days</p>
-<p>Payment: ₹35000</p>
-<button onclick="applyProject('Project 3 - 120 Pages - ₹35000')">Apply Now</button>
-</div>
+    <small>⚡ Half salary paid in advance. Remaining after completion.</small>
+  </div>
+</section>
 
-</div>
+<!-- HOW IT WORKS -->
+<section class="section reveal">
+  <div class="container">
+    <h2>How It Works</h2>
+    <div class="grid grid-2">
+      <div class="card">
+        <h3>1️⃣ Join Telegram</h3>
+        <p>Join our Telegram channel to receive projects.</p>
+      </div>
+      <div class="card">
+        <h3>2️⃣ Get Projects</h3>
+        <p>We provide writing material and instructions.</p>
+      </div>
+      <div class="card">
+        <h3>3️⃣ Write & Earn</h3>
+        <p>Submit your work and receive fast payouts.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-<!-- OFFICE ADDRESS -->
-<div class="glass-box">
-<h2 style="color:#38bdf8;">🏢 Office Address</h2>
-<p><strong>Company Name:</strong> AB Publication</p>
-<p><strong>Office Address:</strong> 2nd Floor, Business Hub Complex,mumvbai maharashtra 400001</p>
-<p><strong>Working Hours:</strong> Monday – Saturday (10:00 AM – 6:00 PM)</p>
-<p><strong>Email:</strong> careers@abpublication.in</p>
-<p style="opacity:0.8;margin-top:10px;">
-Courier submission address will be shared after project confirmation.
-</p>
-</div>
+<!-- AUTO VIDEO SLIDER -->
+<section class="section reveal">
+  <h2>🎥 Customer Reviews</h2>
+
+  <div class="slider container">
+    <div class="slides" id="slides">
+      <div class="slide">
+        <video controls>
+          <source src="review1.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="slide">
+        <video controls>
+          <source src="review2.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PAYMENT PROOFS -->
+<section class="section reveal">
+  <h2>💰 Payment Proofs</h2>
+  <div class="grid grid-2 container">
+    <div class="card">
+      <img src="payment1.jpg" alt="Payment Proof 1">
+    </div>
+    <div class="card">
+      <img src="payment2.jpg" alt="Payment Proof 2">
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="section reveal">
+  <h2>Ready to Start?</h2>
+  <a href="https://t.me/+9FiHC-ETIR80ZjM1" class="btn">Join Telegram</a>
+  <a href="https://wa.me/919929131389" class="btn btn-green">WhatsApp Us</a>
+</section>
 
 <footer>
-© 2026 AB Publication | All Rights Reserved
+  © 2026 AB Publication. All rights reserved.
 </footer>
 
 <script>
-function applyProject(projectName){
-var whatsappNumber = "919929131389";
-var message = "New Application - AB Publication%0A%0A"
-+ "Interested Project: " + projectName + "%0A"
-+ "Please share further details.";
-var url = "https://wa.me/" + whatsappNumber + "?text=" + message;
-window.open(url, "_blank");
+/* Scroll Reveal */
+function reveal(){
+  var reveals=document.querySelectorAll(".reveal");
+  for(var i=0;i<reveals.length;i++){
+    var windowHeight=window.innerHeight;
+    var elementTop=reveals[i].getBoundingClientRect().top;
+    var elementVisible=100;
+    if(elementTop<windowHeight-elementVisible){
+      reveals[i].classList.add("active");
+    }
+  }
 }
+window.addEventListener("scroll",reveal);
 
-// Slot counter demo
-let slots = 12;
-setInterval(function(){
-if(slots > 3){
-slots--;
-document.getElementById("slots").innerText = slots;
-}
-}, 15000);
+/* Auto Slider */
+let index=0;
+const slides=document.getElementById("slides");
+const totalSlides=slides.children.length;
+setInterval(()=>{
+  index++;
+  if(index>=totalSlides) index=0;
+  slides.style.transform=`translateX(-${index*100}%)`;
+},4000);
 </script>
 
 </body>

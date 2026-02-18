@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AB Publication | Handwriting Projects</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',sans-serif;}
+
+body{
+background:linear-gradient(135deg,#0f172a,#1e3a8a,#0f172a);
+background-size:400% 400%;
+animation:gradientMove 12s ease infinite;
+color:white;
+}
+
+@keyframes gradientMove{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+header{text-align:center;padding:40px 20px;}
+header img{width:90px;margin-bottom:15px;}
+header h1{font-size:34px;}
+header p{opacity:0.85;}
+
+.notice{
+margin:20px auto;
+width:90%;
+max-width:1000px;
+background:rgba(220,38,38,0.9);
+padding:14px;
+border-radius:10px;
+text-align:center;
+font-weight:bold;
+}
+
+.glass-box{
+background:rgba(255,255,255,0.1);
+backdrop-filter:blur(15px);
+border:1px solid rgba(255,255,255,0.2);
+padding:25px;
+border-radius:20px;
+box-shadow:0 15px 30px rgba(0,0,0,0.4);
+margin:25px auto;
+max-width:1000px;
+}
+
+.container{
+max-width:1100px;
+margin:auto;
+padding:20px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+
+.card{
+background:rgba(255,255,255,0.1);
+backdrop-filter:blur(15px);
+border:1px solid rgba(255,255,255,0.2);
+padding:30px;
+border-radius:20px;
+box-shadow:0 15px 30px rgba(0,0,0,0.4);
+transition:0.4s;
+}
+
+.card:hover{transform:translateY(-10px);}
+
+.card h3{color:#38bdf8;margin-bottom:15px;}
+.card p{margin:6px 0;}
+
+ul{margin-top:10px;padding-left:20px;}
+button{
+margin-top:20px;
+width:100%;
+padding:12px;
+border:none;
+border-radius:10px;
+background:#25D366;
+color:white;
+font-weight:bold;
+cursor:pointer;
+}
+button:hover{background:#1da851;}
+
+footer{text-align:center;padding:20px;margin-top:40px;opacity:0.7;}
+</style>
+</head>
+
+<body>
+
+<header>
+<img src="logo.png" alt="AB Publication Logo">
+<h1>AB Publication</h1>
+<p>Premium Work From Home Handwriting Projects</p>
+</header>
+
+<div class="notice">
+registration fee is required
+</div>
+
+<!-- SLOT COUNTER -->
+<div class="glass-box" style="text-align:center;">
+<h2 style="color:#facc15;">⚡ Limited Project Slots Available</h2>
+<p style="font-size:18px;margin-top:10px;">
+Remaining Slots: <span id="slots" style="font-weight:bold;color:#22c55e;">12</span>
+</p>
+<p style="opacity:0.8;">Slots are filled on first-come, first-serve basis.</p>
+</div>
+
+<!-- PROJECT DETAILS -->
+<div class="glass-box">
+<h2 style="color:#38bdf8;">📌 Project Work Details</h2>
+<ul>
+<li>All writing material will be provided by AB Publication via courier.</li>
+<li>Candidate must complete the project within the given time duration.</li>
+<li>Completed handwritten book must be sent back via courier.</li>
+<li>Work must follow provided format instructions.</li>
+<li>No overwriting or cutting allowed.</li>
+<li>After receiving project, quality verification will be done.</li>
+<li>Salary will be transferred to bank account within 24–48 hours after approval.</li>
+<li>Project assigned after eligibility verification.</li>
+</ul>
+</div>
+
+<!-- PROJECT CARDS -->
+<div class="container">
+
+<div class="card">
+<h3>Project 1</h3>
+<p>50 Pages (Front & Back 100)</p>
+<p>Duration: 7 Days</p>
+<p>Payment: ₹25000</p>
+<button onclick="applyProject('Project 1 - 50 Pages - ₹25000')">Apply Now</button>
+</div>
+
+<div class="card">
+<h3>Project 2</h3>
+<p>90 Pages (Front & Back 180)</p>
+<p>Duration: 10 Days</p>
+<p>Payment: ₹30000</p>
+<button onclick="applyProject('Project 2 - 90 Pages - ₹30000')">Apply Now</button>
+</div>
+
+<div class="card">
+<h3>Project 3</h3>
+<p>120 Pages (Front & Back 240)</p>
+<p>Duration: 15 Days</p>
+<p>Payment: ₹35000</p>
+<button onclick="applyProject('Project 3 - 120 Pages - ₹35000')">Apply Now</button>
+</div>
+
+</div>
+
+<!-- OFFICE ADDRESS -->
+<div class="glass-box">
+<h2 style="color:#38bdf8;">🏢 Office Address</h2>
+<p><strong>Company Name:</strong> AB Publication</p>
+<p><strong>Office Address:</strong> 2nd Floor, Business Hub Complex,mumvbai maharashtra 400001</p>
+<p><strong>Working Hours:</strong> Monday – Saturday (10:00 AM – 6:00 PM)</p>
+<p><strong>Email:</strong> careers@abpublication.in</p>
+<p style="opacity:0.8;margin-top:10px;">
+Courier submission address will be shared after project confirmation.
+</p>
+</div>
+
+<footer>
+© 2026 AB Publication | All Rights Reserved
+</footer>
+
+<script>
+function applyProject(projectName){
+var whatsappNumber = "919929131389";
+var message = "New Application - AB Publication%0A%0A"
++ "Interested Project: " + projectName + "%0A"
++ "Please share further details.";
+var url = "https://wa.me/" + whatsappNumber + "?text=" + message;
+window.open(url, "_blank");
+}
+
+// Slot counter demo
+let slots = 12;
+setInterval(function(){
+if(slots > 3){
+slots--;
+document.getElementById("slots").innerText = slots;
+}
+}, 15000);
+</script>
+
+</body>
+</html>
